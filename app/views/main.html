@@ -1,0 +1,23 @@
+<div class="hero-unit">
+
+	<h2>Sharing models between controllers - AngularJS</h2>
+
+	<p>This example shows how to fetch, store and share data across different controllers without loosing its bindable functionality.</p>
+
+	<div class="well" ng-controller="SessionController">
+		<h1>Session</h1>
+		<p>{{SessionModel.data.token}}</p>
+		<input type="text" ng-model="SessionModel.data.token">
+		<hr>
+		<button class="btn btn-primary" ng-click="fetch()">Fetch API data</button>
+	</div>
+
+	<div class="well" ng-controller="MediaController">
+		<h1>Media</h1>
+
+		<p>{{SessionModel.data.token}}</p>
+		<input type="text" ng-model="SessionModel.data.token">
+	</div>
+
+	<p>Created by <a href="http://twitter.com/pablodenadai" target="_blank">@pablodenadai</a> using <a href="http://twitter.com/yeoman" target="_blank">@yeoman</a>.</p>
+</div>
